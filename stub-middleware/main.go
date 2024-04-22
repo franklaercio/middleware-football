@@ -1,4 +1,4 @@
-package stub
+package main
 
 import (
 	"fmt"
@@ -6,11 +6,11 @@ import (
 )
 
 type Stub interface {
-	GetStubFromService() (*Stub, error)
+	GetStubFromService() (*Response, error)
 }
 
 type Response struct {
-	Message string
+	Message []byte
 }
 
 func (s *Response) GetStubFromService() (*Response, error) {
@@ -48,6 +48,6 @@ func (s *Response) GetStubFromService() (*Response, error) {
 		return nil, err
 	}
 
-	s.Message = string(buf[:n])
+	s.Message = buf[:n]
 	return s, nil
 }
