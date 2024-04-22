@@ -1,13 +1,9 @@
-package main
+package stub
 
 import (
 	"fmt"
 	"net"
 )
-
-type Stub interface {
-	GetStubFromService() (*Response, error)
-}
 
 type Response struct {
 	Message []byte
