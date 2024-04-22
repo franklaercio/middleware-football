@@ -37,7 +37,7 @@ func (s *Response) GetStubFromService() (*Response, error) {
 
 	conn.Write([]byte("Get|CurrentRound|PL|2021"))
 
-	buf = make([]byte, 1024)
+	buf = make([]byte, 4096)
 
 	n, err = conn.Read(buf)
 	if err != nil {
