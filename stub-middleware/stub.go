@@ -6,7 +6,7 @@ import (
 )
 
 type Response struct {
-	Message []byte
+	Message string
 }
 
 func (s *Response) GetStubFromService() (*Response, error) {
@@ -44,6 +44,6 @@ func (s *Response) GetStubFromService() (*Response, error) {
 		return nil, err
 	}
 
-	s.Message = buf[:n]
+	s.Message = string(buf[:n])
 	return s, nil
 }
