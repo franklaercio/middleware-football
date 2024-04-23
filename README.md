@@ -10,7 +10,7 @@ The chosen case study is a service that retrieves the current round of a footbal
 
 ## Components
 
-![sequence diagram](docs/sequence-diagram-middleware.png)
+![sequence diagram](docs/sequence.png)
 
 The sequence diagram likely shows how these components interact with each other to fulfill a request for current round data in a football championship.
 
